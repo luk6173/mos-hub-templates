@@ -10,7 +10,7 @@
   "extra_parameters": "--restart=unless-stopped",
   "post_parameters": "",
   "web_ui_url": "http://[IP]:[PORT:3000]",
-  "icon": "https://raw.githubusercontent.com/luk6173/mos-hub-templates/images/yuvomi.png",
+  "icon": "https://raw.githubusercontent.com/luk6173/mos-hub-templates/refs/heads/main/images/yuvomi.png",
   "category": [ "Productivity" ],
   "project": "https://github.com/ulsklyc/yuvomi",
   "support": "https://github.com/ulsklyc/yuvomi/issues",
