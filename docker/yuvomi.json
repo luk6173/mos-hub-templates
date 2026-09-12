@@ -54,7 +54,7 @@
     {
       "name": "SESSION_SECRET",
       "key": "SESSION_SECRET",
-      "value": "uI/sAf/BE+KRIxDgmfGdahIBKKft9nHqABDp/n4+g8kzeCTCyIOtN2fWS7qvK4v3",
+      "value": "",
       "mask": true,
       "description": "REQUIRED. A long random string used to sign sessions. Generate with: openssl rand -base64 48",
       "required": true
@@ -62,7 +62,7 @@
     {
       "name": "DB_ENCRYPTION_KEY",
       "key": "DB_ENCRYPTION_KEY",
-      "value": "v8wtRrkXP5YsLLT6oEP/kzUynknsgs9nRy9K37b8kprCTudryvvYuaQt2BdpXvO3",
+      "value": "",
       "mask": true,
       "description": "RECOMMENDED. Strong key to encrypt the database at rest (SQLCipher). Leave empty for unencrypted SQLite. Cannot be changed later without re-encrypting. Generate with: openssl rand -base64 48"
     },
