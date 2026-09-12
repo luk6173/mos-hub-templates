@@ -21,14 +21,16 @@
       "mode": "rw",
       "host": "/mnt/appdata/yuvomi/data",
       "container": "/data",
-      "description": "Database and stored app data (uploads, documents)."
+      "description": "Database and stored app data (uploads, documents).",
+      "required": true
     },
     {
       "name": "Backups",
       "mode": "rw",
       "host": "/mnt/appdata/yuvomi/backups",
       "container": "/backups",
-      "description": "Destination folder for scheduled and manual database backups."
+      "description": "Destination folder for scheduled and manual database backups.",
+      "required": true
     },
     {
       "name": "Modules",
@@ -44,7 +46,8 @@
       "protocol": "tcp",
       "host": "3000",
       "container": "3000",
-      "description": "Host port for the Yuvomi web interface."
+      "description": "Host port for the Yuvomi web interface.",
+      "required": true
     }
   ],
   "variables": [
@@ -53,7 +56,8 @@
       "key": "SESSION_SECRET",
       "value": "uI/sAf/BE+KRIxDgmfGdahIBKKft9nHqABDp/n4+g8kzeCTCyIOtN2fWS7qvK4v3",
       "mask": true,
-      "description": "REQUIRED. A long random string used to sign sessions. Generate with: openssl rand -base64 48"
+      "description": "REQUIRED. A long random string used to sign sessions. Generate with: openssl rand -base64 48",
+      "required": true
     },
     {
       "name": "DB_ENCRYPTION_KEY",
