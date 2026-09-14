@@ -14,7 +14,7 @@
   "category": [ "Productivity" ],
   "project": "https://github.com/ulsklyc/yuvomi",
   "support": "https://github.com/ulsklyc/yuvomi/issues",
-  "description": "Yuvomi is a private, self-hosted family planner — one calm home for everything your household needs to stay organized. No cloud accounts, no subscriptions, no tracking: your data lives on your server and nowhere else.<BR>TEST123",
+  "description": "Yuvomi is a private, self-hosted family planner — one calm home for everything your household needs to stay organized. No cloud accounts, no subscriptions, no tracking: your data lives on your server and nowhere else.\n\nTEST123",
   "paths": [
     {
       "name": "Data",
