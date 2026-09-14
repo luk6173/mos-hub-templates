@@ -33,7 +33,7 @@
       "required": true
     },
     {
-      "name": "Modules",
+      "name": "Modules (optional)",
       "mode": "rw",
       "host": "/mnt/appdata/yuvomi/modules",
       "container": "/modules",
@@ -86,6 +86,41 @@
       "value": "/data/yuvomi.db",
       "mask": false,
       "description": "Path to the SQLite database inside the container. Keep default unless you know what you are doing."
+    },
+    {
+      "name": "SESSION_SECURE",
+      "key": "SESSION_SECURE",
+      "value": "false",
+      "mask": false,
+      "description": "Set to true only when serving Yuvomi over HTTPS behind a reverse proxy. Keep false for direct HTTP access on the LAN."
+    },
+    {
+      "name": "TRUST_PROXY",
+      "key": "TRUST_PROXY",
+      "value": "0",
+      "mask": false,
+      "description": "Use 1 behind one reverse proxy (Caddy/nginx/Traefik), or 'loopback' for direct (no proxy) access."
+    },
+    {
+      "name": "TRUST_PROXY",
+      "key": "TRUST_PROXY",
+      "value": "0",
+      "mask": false,
+      "description": "Use 1 behind one reverse proxy (Caddy/nginx/Traefik), or 'loopback' for direct (no proxy) access."
+    },
+    {
+      "name": "BASE_URL",
+      "key": "BASE_URL",
+      "value": "",
+      "mask": false,
+      "description": "Optional but required for password-reset emails to be sent. Absolute origin used to build reset links, e.g. https://yuvomi.example.com. The request Host header is never trusted as a fallback, to prevent reset-link poisoning."
+    },
+    {
+      "name": "FIXER_API_KEY",
+      "key": "FIXER_API_KEY",
+      "value": "",
+      "mask": false,
+      "description": "Optional. Fixer API key for live currency conversion in Budget → Subscriptions. Rates are cached for 12 hours; works without this key using the cached/manual rate."
     }
   ],
   "devices": [],
