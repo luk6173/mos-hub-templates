@@ -1,0 +1,36 @@
+{
+  "name": "PrintStash-Frontend",
+  "repo": "ghcr.io/xiao-villamor/printstash-frontend:latest",
+  "registry": "https://github.com/xiao-villamor/PrintStash/pkgs/container/printstash-frontend",
+  "network": "printstash",
+  "custom_ip": "",
+  "default_shell": "bash",
+  "privileged": false,
+  "no_autoupdate": false,
+  "extra_parameters": "",
+  "post_parameters": "",
+  "web_ui_url": "http://[IP]:[PORT:3000]/",
+  "icon": "https://raw.githubusercontent.com/luk6173/mos-hub-templates/refs/heads/main/images/printstash.png",
+  "paths": [],
+  "ports": [
+    {
+      "name": "WebUI Port",
+      "protocol": "tcp",
+      "host": "3000",
+      "container": "3000",
+      "description": "Port to open PrintStash in your browser."
+    }
+  ],
+  "variables": [
+    {
+      "name": "Max upload size",
+      "key": "NGINX_CLIENT_MAX_BODY_SIZE",
+      "value": "512m",
+      "mask": false,
+      "description": "nginx client_max_body_size. Match the API VAULT_MAX_UPLOAD_MB (e.g. 512m)."
+    }
+  ],
+  "devices": [],
+  "labels": [],
+  "gpus": []
+}
