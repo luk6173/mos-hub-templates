@@ -11,6 +11,9 @@
   "post_parameters": "/bin/sh -c \"uv run alembic upgrade head && uv run uvicorn app.main:app --host 0.0.0.0 --port 8000 --no-access-log --proxy-headers\"",
   "web_ui_url": "",
   "icon": "https://raw.githubusercontent.com/luk6173/mos-hub-templates/refs/heads/main/images/printstash.png",
+  "category": [ "Productivity" ],
+  "project": "https://ghcr.io/xiao-villamor/printstash-api",
+  "support": "https://github.com/xiao-villamor/PrintStash/issues",  
   "description": "Backend for PrintStash, an open-source self-hosted 3D print library and G-code vault. Stores STL, 3MF, OBJ, STEP/STP, G-code, and BGCODE files plus searchable metadata, thumbnails, collections, tags, revisions, print history, user access, printer connections, and backups. PrintStash adds content-hash duplicate detection, slicer metadata extraction, NAS/shared-volume indexing, G-code outcome tracking, printer workflows, measured usage, cost tracking, and optional Spoolman integration. Install with PrintStash-Frontend on the same user-defined Docker network named \"printstash\"; the frontend reaches this container as hostname \"api\". Set a strong VAULT_JWT_SECRET before first start. Configure local or S3-compatible storage and backups in the setup wizard.\n\n-- IMPORTANT --\nCreate a user-defined Docker network named \"printstash\" first (Settings -> Docker Service -> Docker Networks -> \"+ Add\", or docker network create printstash). Install PrintStash-Frontend on the same network.",
   "paths": [
     {
