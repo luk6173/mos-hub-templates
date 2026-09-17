@@ -3,7 +3,7 @@
   "category": "productivity",
   "description": "Powerful note-taking without the hassle. A free, self-hosted, open-source alternative to Notion, Obsidian, Evernote, or OneNote.",
   "website": "https://poznote.com/",
-  "icon": "https://github.com/timothepoznanski/poznote/blob/main/images/poznote-icon.png",
+  "icon": "https://raw.githubusercontent.com/timothepoznanski/poznote/main/images/poznote-icon.png",
   "support": "https://github.com/timothepoznanski/poznote/issues",
   "web_ui_url": "http://[ADDRESS]:[PORT:8040]/"
 }
