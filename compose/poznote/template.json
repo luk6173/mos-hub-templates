@@ -1,6 +1,6 @@
 {
-  "name": "poznote-compose",
-  "category": "productivity",
+  "name": "Poznote",
+  "category": "[productivity]",
   "description": "Powerful note-taking without the hassle. A free, self-hosted, open-source alternative to Notion, Obsidian, Evernote, or OneNote.",
   "website": "https://poznote.com/",
   "icon": "https://raw.githubusercontent.com/timothepoznanski/poznote/main/images/poznote-icon.png",
