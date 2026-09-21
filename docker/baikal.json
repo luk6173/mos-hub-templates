@@ -9,7 +9,7 @@
   "no_autoupdate": false,
   "extra_parameters": "--restart=unless-stopped",
   "post_parameters": "",
-  "web_ui_url": "",
+  "web_ui_url": "http://[IP]:[PORT:80]",
   "icon": "https://raw.githubusercontent.com/Joshndroid/joshndroid-unraid-docker-templates/main/icons/baikal.png",
   "category": [ "Productivity" ],
   "project": "https://github.com/sabre-io/Baikal",
