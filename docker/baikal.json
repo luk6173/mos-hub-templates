@@ -1,7 +1,7 @@
 {
   "name": "Baïkal",
   "repo": "ghcr.io/aalmenar/baikal:latest",
-  "registry": "https://github.com/xiao-villamor/PrintStash/pkgs/container/printstash-api",
+  "registry": "https://github.com/aalmenar/baikal-docker/pkgs/container/baikal",
   "network": "bridge",
   "custom_ip": "",
   "default_shell": "bash",
