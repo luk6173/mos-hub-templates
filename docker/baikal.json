@@ -1,5 +1,5 @@
 {
-  "name": "Baïkal",
+  "name": "Baikal",
   "repo": "ghcr.io/aalmenar/baikal:latest",
   "registry": "https://github.com/aalmenar/baikal-docker/pkgs/container/baikal",
   "network": "bridge",
