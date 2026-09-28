@@ -1,0 +1,57 @@
+{
+  "name": "Traggo",
+  "repo": "traggo/server:latest",
+  "registry": "https://hub.docker.com/r/traggo/server",
+  "network": "bridge",
+  "custom_ip": "",
+  "default_shell": "bash",
+  "privileged": false,
+  "no_autoupdate": false,
+  "extra_parameters": "",
+  "post_parameters": "",
+  "web_ui_url": "http://[IP]:[PORT:3030]",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/traggo.png",
+  "category": [ "Productivity" ],
+  "project": "https://github.com/traggo/server",
+  "support": "https://github.com/traggo/server/issues",  
+  "description": "Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.",
+  "paths": [
+    {
+      "name": "Config",
+      "mode": "rw",
+      "host": "/mnt/user/appdata/traggo",
+      "container": "/opt/traggo/data",
+      "description": ""
+    }
+  ],
+  "ports": [
+    {
+      "name": "Container Port",
+      "protocol": "tcp",
+      "host": "3030",
+      "container": "3030",
+      "description": " "
+    }
+  ],
+  "variables": [
+    {
+      "name": "TRAGGO_DEFAULT_USER_NAME",
+      "key": "TRAGGO_DEFAULT_USER_NAME",
+      "value": "",
+      "mask": false,
+      "description": "",
+      "required": true
+    },
+    {
+      "name": "TRAGGO_DEFAULT_USER_PASS",
+      "key": "TRAGGO_DEFAULT_USER_PASS",
+      "value": "",
+      "mask": true,
+      "description": "",
+      "required": true
+    }
+  ],
+  "devices": [],
+  "labels": [],
+  "gpus": []
+}
