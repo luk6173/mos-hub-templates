@@ -1,0 +1,40 @@
+{
+  "name": "Cinny",
+  "repo": "ghcr.io/cinnyapp/cinny:v4.12.7",
+  "registry": "https://github.com/cinnyapp/cinny/pkgs/container/cinny",
+  "network": "bridge",
+  "custom_ip": "",
+  "default_shell": "bash",
+  "privileged": false,
+  "no_autoupdate": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": "",
+  "web_ui_url": "http://[IP]:[PORT:8080]",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/cinny.png",
+  "category": [ "Productivity" ],
+  "project": "https://github.com/cinnyapp/cinny",
+  "support": "https://github.com/cinnyapp/cinny/issues",  
+  "description": "A Matrix client focusing primarily on simple, elegant and secure interface. The main goal is to have an instant messaging application that is easy on people and has a modern touch.",
+  "paths": [
+    {
+      "name": "Config (optional)",
+      "mode": "ro",
+      "host": "/app/config.json",
+      "container": "/var/www/baikal/config.json",
+      "description": ""
+    }
+  ],
+  "ports": [
+    {
+      "name": "Container Port",
+      "protocol": "tcp",
+      "host": "8080",
+      "container": "80",
+      "description": ""
+    }
+  ],
+  "variables": [],
+  "devices": [],
+  "labels": [],
+  "gpus": []
+}
