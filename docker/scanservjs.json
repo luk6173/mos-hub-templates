@@ -24,18 +24,18 @@
       "description": "Folder for persisting configuration data"
     },
     {
-      "name": "Airscan-Config",
-      "mode": "rw",
-      "host": "/mnt/user/appdata/scanservjs/config/airscan.conf",
-      "container": "/etc/sane.d/airscan.conf",
-      "description": "Configuration file for  Airscan"
-    },
-    {
       "name": "Scan Output",
       "mode": "rw",
       "host": "/mnt/user/appdata/scanservjs/output",
       "container": "/var/lib/scanservjs/output",
       "description": "Path for the file output from performed scans"
+    },
+    {
+      "name": "dbus",
+      "mode": "rw",
+      "host": "/var/run/dbus",
+      "container": "/var/run/dbus",
+      "description": "dbus (needed for automatic detection of network scanners through bonjour)"
     }
   ],
   "ports": [
