@@ -19,8 +19,8 @@
     {
       "name": "Config (optional)",
       "mode": "ro",
-      "host": "/app/config.json",
-      "container": "/var/www/baikal/config.json",
+      "host": "/mnt/appdata/cinny/config.json",
+      "container": "/app/config.json",
       "description": ""
     }
   ],
