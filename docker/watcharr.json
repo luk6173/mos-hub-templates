@@ -1,0 +1,40 @@
+{
+  "name": "Watcharr",
+  "repo": "ghcr.io/sbondco/watcharr:latest",
+  "registry": "https://github.com/sbondco/Watcharr/pkgs/container/watcharr",
+  "network": "bridge",
+  "custom_ip": "",
+  "default_shell": "bash",
+  "privileged": false,
+  "no_autoupdate": false,
+  "extra_parameters": "",
+  "post_parameters": "",
+  "web_ui_url": "http://[IP]:[PORT:3080]",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/watcharr.png",
+  "category": [ "Media" ],
+  "project": "https://github.com/sbondCo/Watcharr",
+  "support": "https://github.com/sbondCo/Watcharr/issues",  
+  "description": "I'm your new easily self-hosted content watched list. The place you store your watched (or watching, planned, etc) movies and tv shows (and anime), rate them and track their status.",
+  "paths": [
+    {
+      "name": "Data",
+      "mode": "rw",
+      "host": "/mnt/appdata/watcharr",
+      "container": "/data",
+      "description": ""
+    }
+  ],
+  "ports": [
+    {
+      "name": "Container Port",
+      "protocol": "tcp",
+      "host": "3080",
+      "container": "3080",
+      "description": " "
+    }
+  ],
+  "variables": [],
+  "devices": [],
+  "labels": [],
+  "gpus": []
+}
