@@ -1,0 +1,47 @@
+{
+  "name": "scanservjs",
+  "repo": "sbs20/scanservjs:latest",
+  "registry": "https://hub.docker.com/r/sbs20/scanservjs",
+  "network": "bridge",
+  "custom_ip": "",
+  "default_shell": "bash",
+  "privileged": true,
+  "no_autoupdate": false,
+  "extra_parameters": "--restart=unless-stopped",
+  "post_parameters": "",
+  "web_ui_url": "http://[IP]:[PORT:8080]",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/scanservjs.png",
+  "category": [ "Productivity" ],
+  "project": "https://github.com/sbs20/scanservjs/",
+  "support": "https://github.com/sbs20/scanservjs//issues",  
+  "description": "Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.",
+  "paths": [
+    {
+      "name": "Config",
+      "mode": "rw",
+      "host": "/mnt/user/appdata/scanservjs/config",
+      "container": "/etc/scanservjs",
+      "description": ""
+    },
+    {
+      "name": "Output",
+      "mode": "rw",
+      "host": "/mnt/user/appdata/scanservjs/output",
+      "container": "/var/lib/scanservjs/output",
+      "description": ""
+    }
+  ],
+  "ports": [
+    {
+      "name": "Container Port",
+      "protocol": "tcp",
+      "host": "8080",
+      "container": "8080",
+      "description": ""
+    }
+  ],
+  "variables": [],
+  "devices": [],
+  "labels": [],
+  "gpus": []
+}
