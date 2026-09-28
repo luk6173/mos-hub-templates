@@ -24,6 +24,13 @@
       "description": ""
     },
     {
+      "name": "Airscan-Config",
+      "mode": "rw",
+      "host": "/mnt/user/appdata/scanservjs/config/airscan.conf",
+      "container": "/etc/sane.d/airscan.conf",
+      "description": ""
+    },
+    {
       "name": "Output",
       "mode": "rw",
       "host": "/mnt/user/appdata/scanservjs/output",
