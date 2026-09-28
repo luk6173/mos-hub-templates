@@ -63,6 +63,22 @@
       "mask": false,
       "description": "Forces the application to ignore the result of the automatic device detection (scanimage -L) and instead only uses the entries present in the configuration file and docker environment variables.",
       "required": true
+    },
+    {
+      "name": "PUID",
+      "key": "PUID",
+      "value": "0",
+      "mask": false,
+      "description": "",
+      "required": true
+    },
+    {
+      "name": "PGID",
+      "key": "PGID",
+      "value": "1000",
+      "mask": false,
+      "description": "",
+      "required": true
     }
   ],
   "devices": [],
