@@ -21,7 +21,14 @@
       "mode": "rw",
       "host": "/mnt/user/appdata/scanservjs/config",
       "container": "/etc/scanservjs",
-      "description": ""
+      "description": "Folder for persisting configuration data"
+    },
+    {
+      "name": "Airscan-Config",
+      "mode": "rw",
+      "host": "/mnt/user/appdata/scanservjs/config/airscan.conf",
+      "container": "/etc/sane.d/airscan.conf",
+      "description": "Configuration file for  Airscan"
     },
     {
       "name": "Scan Output",
@@ -42,35 +49,19 @@
   ],
   "variables": [
     {
-      "name": "Saned Net Hosts",
-      "key": "SANED_NET_HOSTS",
-      "value": "",
-      "mask": false,
-      "description": "If you want to use a SaneOverNetwork scanner then to perform the equivalent of adding hosts to /etc/sane.d/net.conf specify a list of ip addresses separated by semicolons in the SANED_NET_HOSTS environment variable.",
-      "required": true
-    },
-    {
-      "name": "Airscan Devices",
-      "key": "AIRSCAN_DEVICES",
-      "value": "",
-      "mask": false,
-      "description": "If you want to specifically add sane-airscan devices to your /etc/sane.d/airscan.conf then use the AIRSCAN_DEVICES environment variable (semicolon delimited).",
-      "required": true
-    },
-    {
-      "name": "Devices",
-      "key": "DEVICES",
-      "value": "",
-      "mask": false,
-      "description": "Force add devices use DEVICES (semicolon delimited).",
-      "required": true
-    },
-    {
       "name": "OCR Language",
       "key": "OCR_LANG",
       "value": "",
       "mask": false,
       "description": "Determines the language that is to be used for OCR (optical character recognition). The value has to conform with tesseracts naming scheme.",
+      "required": true
+    },
+    {
+      "name": "Ignore Scanimage List",
+      "key": "SCANIMAGE_LIST_IGNORE",
+      "value": "true",
+      "mask": false,
+      "description": "Forces the application to ignore the result of the automatic device detection (scanimage -L) and instead only uses the entries present in the configuration file and docker environment variables.",
       "required": true
     }
   ],
