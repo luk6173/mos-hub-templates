@@ -14,7 +14,7 @@
   "category": [ "Productivity" ],
   "project": "https://github.com/sbs20/scanservjs/",
   "support": "https://github.com/sbs20/scanservjs//issues",  
-  "description": "Traggo is a tag-based time tracking tool. In Traggo there are no tasks, only tagged time spans.",
+  "description": "scanservjs is a web UI frontend for your scanner. It allows you to share one or more scanners (using SANE) on a network without the need for drivers or complicated installation.",
   "paths": [
     {
       "name": "Config",
