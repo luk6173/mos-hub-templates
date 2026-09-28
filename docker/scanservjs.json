@@ -7,9 +7,9 @@
   "default_shell": "bash",
   "privileged": true,
   "no_autoupdate": false,
-  "extra_parameters": "--restart=unless-stopped",
-  "post_parameters": "",
-  "web_ui_url": "http://[IP]:[PORT:8080]",
+  "extra_parameters": "--restart=unless-stopped --entrypoint /bin/sh",
+  "post_parameters": "-c \"chown scanservjs:nogroup /var/lib/scanservjs/devices.json 2>/dev/null; exec /entrypoint.sh\"",
+  "web_ui_url": "http://[IP]:[PORT:8090]",
   "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/scanservjs.png",
   "category": [ "Productivity" ],
   "project": "https://github.com/sbs20/scanservjs/",
@@ -19,14 +19,21 @@
     {
       "name": "Config Path",
       "mode": "rw",
-      "host": "/mnt/user/appdata/scanservjs/config",
+      "host": "/mnt/appdata/scanservjs/config",
       "container": "/etc/scanservjs",
       "description": "Folder for persisting configuration data"
     },
     {
+      "name": "Airscan Config",
+      "mode": "rw",
+      "host": "/mnt/appdata/scanservjs/airscan.conf",
+      "container": "/etc/sane.d/airscan.conf",
+      "description": "Manuell konfigurierter Brother-Scanner (eSCL, discovery disabled)"
+    },
+    {
       "name": "Scan Output",
       "mode": "rw",
-      "host": "/mnt/user/appdata/scanservjs/output",
+      "host": "/mnt/appdata/scanservjs/output",
       "container": "/var/lib/scanservjs/output",
       "description": "Path for the file output from performed scans"
     },
@@ -42,7 +49,7 @@
     {
       "name": "Web Interface Port",
       "protocol": "tcp",
-      "host": "8080",
+      "host": "8090",
       "container": "8080",
       "description": ""
     }
@@ -51,7 +58,7 @@
     {
       "name": "OCR Language",
       "key": "OCR_LANG",
-      "value": "",
+      "value": "deu",
       "mask": false,
       "description": "Determines the language that is to be used for OCR (optical character recognition). The value has to conform with tesseracts naming scheme.",
       "required": true
@@ -63,6 +70,14 @@
       "mask": false,
       "description": "Forces the application to ignore the result of the automatic device detection (scanimage -L) and instead only uses the entries present in the configuration file and docker environment variables.",
       "required": true
+    },
+    {
+      "name": "Devices",
+      "key": "DEVICES",
+      "value": "airscan:e0:Brother_MFC_J497DW",
+      "mask": false,
+      "description": "Manuell festgelegte Geräteliste, damit die Web-UI zuverlässig genau diesen Scanner zeigt",
+      "required": false
     }
   ],
   "devices": [],
