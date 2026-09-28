@@ -1,0 +1,72 @@
+{
+  "name": "Stirling PDF",
+  "repo": "stirlingtools/stirling-pdf",
+  "registry": "https://hub.docker.com/r/stirlingtools/stirling-pdf",
+  "network": "bridge",
+  "custom_ip": "",
+  "default_shell": "bash",
+  "privileged": false,
+  "no_autoupdate": false,
+  "extra_parameters": "",
+  "post_parameters": "",
+  "web_ui_url": "http://[IP]:[PORT:8080]",
+  "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/stirling-pdf.png",
+  "category": [ "Productivity" ],
+  "project": "https://github.com/Stirling-Tools/Stirling-PDF",
+  "support": "https://github.com/Stirling-Tools/Stirling-PDF/issues",  
+  "description": "Stirling PDF is a powerful, open-source PDF editing platform. Run it as a personal desktop app, in the browser, or deploy it on your own servers with a private API. Edit, sign, redact, convert, and automate PDFs without sending documents to external services.",
+  "paths": [
+    {
+      "name": "Configs",
+      "mode": "rw",
+      "host": "/mnt/user/appdata/stirling-pdf/configs",
+      "container": "/configs",
+      "description": ""
+    },
+    {
+      "name": "CustomFiles",
+      "mode": "rw",
+      "host": "/mnt/user/appdata/stirling-pdf/customFiles",
+      "container": "/customFiles",
+      "description": ""
+    }
+  ],
+  "ports": [
+    {
+      "name": "Container Port",
+      "protocol": "tcp",
+      "host": "8080",
+      "container": "8080",
+      "description": ""
+    }
+  ],
+  "variables": [
+    {
+      "name": "SYSTEM_DEFAULT_LOCALE",
+      "key": "SYSTEM_DEFAULT_LOCALE",
+      "value": "de-DE",
+      "mask": false,
+      "description": "",
+      "required": true
+    },
+    {
+      "name": "SYSTEM_GOOGLEVISIBILITY",
+      "key": "SYSTEM_GOOGLEVISIBILITY",
+      "value": "false",
+      "mask": false,
+      "description": "'true' to allow Google visibility (via robots.txt), 'false' to disallow",
+      "required": true
+    },
+    {
+      "name": "METRICS_ENABLED",
+      "key": "METRICS_ENABLED",
+      "value": "false",
+      "mask": false,
+      "description": "",
+      "required": true
+    }
+  ],
+  "devices": [],
+  "labels": [],
+  "gpus": []
+}
