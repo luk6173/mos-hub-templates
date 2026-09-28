@@ -17,37 +17,63 @@
   "description": "scanservjs is a web UI frontend for your scanner. It allows you to share one or more scanners (using SANE) on a network without the need for drivers or complicated installation.",
   "paths": [
     {
-      "name": "Config",
+      "name": "Config Path",
       "mode": "rw",
       "host": "/mnt/user/appdata/scanservjs/config",
       "container": "/etc/scanservjs",
       "description": ""
     },
     {
-      "name": "Airscan-Config",
-      "mode": "rw",
-      "host": "/mnt/user/appdata/scanservjs/config/airscan.conf",
-      "container": "/etc/sane.d/airscan.conf",
-      "description": ""
-    },
-    {
-      "name": "Output",
+      "name": "Scan Output",
       "mode": "rw",
       "host": "/mnt/user/appdata/scanservjs/output",
       "container": "/var/lib/scanservjs/output",
-      "description": ""
+      "description": "Path for the file output from performed scans"
     }
   ],
   "ports": [
     {
-      "name": "Container Port",
+      "name": "Web Interface Port",
       "protocol": "tcp",
       "host": "8080",
       "container": "8080",
       "description": ""
     }
   ],
-  "variables": [],
+  "variables": [
+    {
+      "name": "Saned Net Hosts",
+      "key": "SANED_NET_HOSTS",
+      "value": "",
+      "mask": false,
+      "description": "If you want to use a SaneOverNetwork scanner then to perform the equivalent of adding hosts to /etc/sane.d/net.conf specify a list of ip addresses separated by semicolons in the SANED_NET_HOSTS environment variable.",
+      "required": true
+    },
+    {
+      "name": "Airscan Devices",
+      "key": "AIRSCAN_DEVICES",
+      "value": "",
+      "mask": false,
+      "description": "If you want to specifically add sane-airscan devices to your /etc/sane.d/airscan.conf then use the AIRSCAN_DEVICES environment variable (semicolon delimited).",
+      "required": true
+    },
+    {
+      "name": "Devices",
+      "key": "DEVICES",
+      "value": "",
+      "mask": false,
+      "description": "Force add devices use DEVICES (semicolon delimited).",
+      "required": true
+    },
+    {
+      "name": "OCR Language",
+      "key": "OCR_LANG",
+      "value": "",
+      "mask": false,
+      "description": "Determines the language that is to be used for OCR (optical character recognition). The value has to conform with tesseracts naming scheme.",
+      "required": true
+    }
+  ],
   "devices": [],
   "labels": [],
   "gpus": []
