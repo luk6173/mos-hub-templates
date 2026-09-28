@@ -10,6 +10,7 @@
   "extra_parameters": "--restart=unless-stopped --entrypoint /bin/sh",
   "post_parameters": "-c \"chown scanservjs:nogroup /var/lib/scanservjs/devices.json 2>/dev/null; exec /entrypoint.sh\"",
   "web_ui_url": "http://[IP]:[PORT:8090]",
+  "readme_url": "https://github.com/luk6173/mos-hub-templates/blob/main/readme/scanservjs.md",
   "icon": "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/scanservjs.png",
   "category": [ "Productivity" ],
   "project": "https://github.com/sbs20/scanservjs/",
