@@ -14,7 +14,7 @@
   "category": [ "Productivity" ],
   "project": "https://github.com/sbs20/scanservjs/",
   "support": "https://github.com/sbs20/scanservjs//issues",  
-  "description": "scanservjs is a web UI frontend for your scanner. It allows you to share one or more scanners (using SANE) on a network without the need for drivers or complicated installation.",
+  "description": "scanservjs is a web UI frontend for your scanner (SANE-based). Most network scanners (eSCL/AirPrint) are detected automatically. If your scanner doesn't show up, you can add it manually via the 'Airscan Config' file – guide: https://github.com/sbs20/scanservjs/issues/628",
   "paths": [
     {
       "name": "Config Path",
@@ -76,7 +76,7 @@
       "key": "DEVICES",
       "value": "airscan:e0:Brother_MFC_J497DW",
       "mask": false,
-      "description": "Manuell festgelegte Geräteliste, damit die Web-UI zuverlässig genau diesen Scanner zeigt",
+      "description": "Optional: Force a specific scanner if auto-detection fails. To find the correct value, open a shell in the running container and run 'scanimage -L' – copy the string between the backticks, e.g. 'airscan:e0:MyScanner'. Leave empty for automatic detection.",
       "required": false
     }
   ],
