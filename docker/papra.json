@@ -14,7 +14,7 @@
   "category": [ "Productivity" ],
   "project": "https://github.com/papra-hq/papra",
   "support": "https://github.com/papra-hq/papra/issues",  
-  "description": "Papra is a lightweight document management solution (DMS) that automatically imports, stores, and organizes your files. A simpler alternative to Paperless.\n\nREQUIRED: Create Directory for Papra data:\nmkdir -p /mnt/appdata/papra/{db,documents}",
+  "description": "Papra is a lightweight document management solution (DMS) that automatically imports, stores, and organizes your files. A simpler alternative to Paperless.\n\nREQUIRED: Create Directory for Papra data:\nmkdir -p /mnt/appdata/papra/{db,documents}\nchown -R 500:500 /mnt/appdata/papra",
   "paths": [
     {
       "name": "App Data",
