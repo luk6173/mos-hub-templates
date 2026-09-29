@@ -15,7 +15,7 @@
   "category": [ "Productivity" ],
   "project": "https://github.com/sbs20/scanservjs/",
   "support": "https://github.com/sbs20/scanservjs//issues",  
-  "description": "scanservjs is a web UI frontend for your scanner (SANE-based). Most network scanners (eSCL/AirPrint) are detected automatically. If your scanner doesn't show up, you can add it manually via the 'Airscan Config' file – guide: https://github.com/sbs20/scanservjs/issues/628",
+  "description": "scanservjs is a web UI frontend for your scanner (SANE-based). Most network scanners (eSCL/AirPrint) are detected automatically. Important: Read the README to set up your scanner.",
   "paths": [
     {
       "name": "Config Path",
