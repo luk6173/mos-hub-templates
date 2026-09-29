@@ -7,14 +7,14 @@
   "default_shell": "bash",
   "privileged": false,
   "no_autoupdate": false,
-  "extra_parameters": "--user=99:100",
+  "extra_parameters": "--user=500:500",
   "post_parameters": "",
   "web_ui_url": "http://[IP]:[PORT:1221]",
   "icon": "https://raw.githubusercontent.com/egnerdata/unraid-docker-templates/main/icons/papra.png",
   "category": [ "Productivity" ],
   "project": "https://github.com/papra-hq/papra",
   "support": "https://github.com/papra-hq/papra/issues",  
-  "description": "Papra is a lightweight document management solution (DMS) that automatically imports, stores, and organizes your files. A simpler alternative to Paperless.",
+  "description": "Papra is a lightweight document management solution (DMS) that automatically imports, stores, and organizes your files. A simpler alternative to Paperless.\n\nREQUIRED: Create Directory for Papra data: mkdir -p /mnt/appdata/papra/{db,documents}",
   "paths": [
     {
       "name": "App Data",
@@ -50,20 +50,6 @@
       "mask": false,
       "description": "The secret for the auth, it should be at least 32 characters long. Generate with openssl rand -hex 48",
       "required": true
-    },
-    {
-      "name": "PUID",
-      "key": "PUID",
-      "value": "99",
-      "mask": false,
-      "description": "User ID for file permissions."
-    },
-    {
-      "name": "PGID",
-      "key": "PGID",
-      "value": "100",
-      "mask": false,
-      "description": "Group ID for file permissions."
     }
   ],
   "devices": [],
