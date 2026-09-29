@@ -7,7 +7,7 @@
   "default_shell": "bash",
   "privileged": false,
   "no_autoupdate": false,
-  "extra_parameters": "",
+  "extra_parameters": "--user=99:100",
   "post_parameters": "",
   "web_ui_url": "http://[IP]:[PORT:1221]",
   "icon": "https://raw.githubusercontent.com/egnerdata/unraid-docker-templates/main/icons/papra.png",
